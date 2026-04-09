@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulador tienda videojuegos</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/index2.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">Simulador tienda de video juegos</div>
+
+      <div class="cart-info">
+        <a
+          href="./pages/favoritos.html"
+          style="text-decoration: none; color: white"
+        >
+          Favoritos: <span id="fav-count">0</span> </a
+        >|<a
+          href="./pages/cart.html"
+          style="text-decoration: none; color: white"
+        >
+          🛒 <span id="cart-count">0</span>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section id="game-grid" class="game-grid">
+        <p class="loading">Cargando juegos...</p>
+      </section>
+    </main>
+
+    <div id="pagination-nav" style="text-align: center; padding: 20px">
+      <button id="btn-prev" onclick="changePage(-1)">Anterior</button>
+      <span id="page-number">Página actual: 1</span>
+      <button id="btn-next" onclick="changePage(1)">Siguiente</button>
+    </div>
+  </body>
+</html>
